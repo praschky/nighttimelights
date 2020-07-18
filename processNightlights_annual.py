@@ -10,7 +10,7 @@ from multiprocessing import Process, JoinableQueue
 from threading import Thread
 
 # Directory containing input data.
-in_dir = r'C:\Workspace\temp'
+in_dir = r'PATH'
 
 # Set to True to read raster to memory, for some speed gains (will require
 # >20Gb RAM per core). Otherwise requires up to 5Gb per core.
@@ -25,46 +25,12 @@ cpus = 1
 
 # Dict with input/output file paths and unique IDs.
 zones = {
-    'gadm_original': [
-        r'F:\PaulHenderson\admin_Merge_SN2_EckertVIRemoveContainPolygon.shp',
-        r'F:\PaulHenderson\PrioStats\nightlights_gadm_original_annual.csv',
+    'gadm': [
+        r'PATH SHAPEFILE',
+        r'OUTPAtH CSV',
         'object_id_'
     ],
-    'gadm': [
-        r'D:\RawData\gadm28\gadm28.shp',
-        r'F:\PaulHenderson\PrioStats\nightlights_gadm28_annual.csv',
-        'OBJECTID'
-    ],
-    'gadm2': [
-        r'D:\RawData\gadm28\gadm28_adm2.shp',
-        r'F:\PaulHenderson\PrioStats\nightlights_gadm28_adm2_annual.csv',
-        'OBJECTID'
-    ],
-    'prio': [
-        r'F:\PaulHenderson\priogrid_cell.shp',
-        r'F:\PaulHenderson\PrioStats\nightlights_prio_annual.csv',
-        'gid'
-    ],
-    'greg': [
-        r'F:\PaulHenderson\GREG.shp',
-        r'F:\PaulHenderson\PrioStats\nightlights_greg_annual.csv',
-        'FeatureID'
-    ],
-    'murdock': [
-        r'F:\PaulHenderson\Murdock_EA_2011_vkZ.shp',
-        r'F:\PaulHenderson\PrioStats\nightlights_murdock_annual.csv',
-        'TRIBE_CODE'
-    ],
-    'lang': [
-        r'F:\PaulHenderson\lang\langa.shp',
-        r'F:\PaulHenderson\PrioStats\nightlights_lang_annual.csv',
-        'ID'
-    ],
-    'epr': [
-        r'F:\PaulHenderson\GeoEPR-2014.shp',
-        r'F:\PaulHenderson\PrioStats\nightlights_epr_annual.csv',
-        'gwgroupid'
-    ]
+    
 }
 
 # Determine total extent of raster files.
